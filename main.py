@@ -77,8 +77,8 @@ class SnakeGameClass:
            if self.points:
                for i, point in enumerate(self.points):
                    if i != 0:
-                       cv2.line(imgMain, self.points[i - 1], self.points[i], (0, 0, 255), 20)
-               cv2.circle(imgMain, self.points[-1], 20, (0, 255, 0), cv2.FILLED)
+                       cv2.line(imgMain, self.points[i - 1], self.points[i], (0,128,0), 20)
+               cv2.circle(imgMain, self.points[-1], 20, (0,100,0), cv2.FILLED)
 
            # Draw Food
            imgMain = cvzone.overlayPNG(imgMain, self.imgFood,
@@ -106,7 +106,7 @@ class SnakeGameClass:
        return imgMain
 
 
-game = SnakeGameClass("Donut.png")
+game = SnakeGameClass("apple.png")
 
 
 while True:
